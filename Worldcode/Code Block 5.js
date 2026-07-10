@@ -524,7 +524,7 @@ function generateUndergroundChunk() {
 
         undergroundGenerating = false;
 
-        startStructureGeneration();
+        StructureEngine.start();
 
         const endTime =
             api.now();
@@ -605,4 +605,6 @@ function terrainTick() {
 
         return;
     }
+
+    StructureEngine.tick();
 }
